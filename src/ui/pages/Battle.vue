@@ -2,6 +2,7 @@
 import { onMounted, onBeforeUnmount } from 'vue';
 import Phaser from 'phaser';
 import { GameScene } from '@/game/scenes/GameScene';
+import { BootScene } from '@/game/scenes/BootScene';
 
 let game: Phaser.Game | null = null;
 const config: Phaser.Types.Core.GameConfig = {
@@ -14,7 +15,7 @@ const config: Phaser.Types.Core.GameConfig = {
     default: 'arcade',
     arcade: { gravity: { y: 0 }, debug: false }
   },
-  scene: [GameScene]
+  scene: [BootScene, GameScene]
 };
 
 onMounted(() => {
