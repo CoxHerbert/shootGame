@@ -1,4 +1,6 @@
 [
-  { "id": "wp_pistol", "name": "标准手枪", "baseAtk": 8, "rof": 4, "bulletSpeed": 480, "spread": 1 },
-  { "id": "wp_rifle", "name": "突击步枪", "baseAtk": 6, "rof": 9, "bulletSpeed": 600, "spread": 2 }
+  { "id":"wp_pistol","name":"标准手枪","family":"pistol","baseAtk":8,"rof":4,"bulletSpeed":520,"spread":1,"maxLevel":10,"passives":[{"tier":3,"id":"stable"},{"tier":6,"id":"weakspot"}] },
+  { "id":"wp_rifle","name":"突击步枪","family":"rifle","baseAtk":6,"rof":9,"bulletSpeed":600,"spread":2,"maxLevel":10,"passives":[{"tier":3,"id":"stabilizer"},{"tier":6,"id":"suppress"}] },
+  { "id":"wp_shotgun","name":"霰弹枪","family":"shotgun","baseAtk":14,"rof":1.2,"pellets":6,"bulletSpeed":520,"spread":12,"maxLevel":10,"passives":[{"tier":3,"id":"wide_blast"},{"tier":6,"id":"bleed"}] },
+  { "id":"wp_beam","name":"相位射线","family":"beam","baseAtk":4,"rof":12,"pierce":2,"bulletSpeed":900,"spread":0,"maxLevel":10,"passives":[{"tier":3,"id":"pierce+1"},{"tier":6,"id":"overheat"}] }
 ]

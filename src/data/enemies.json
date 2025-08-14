@@ -1,22 +1,10 @@
 [
-  {
-    "id": "grunt",
-    "hp": 30,
-    "atk": 5,
-    "speed": 80,
-    "ai": "chase",
-    "dropTableId": "dt_common"
-  },
-  {
-    "id": "mini_boss",
-    "hp": 400,
-    "atk": 20,
-    "speed": 60,
-    "ai": "phase_boss",
-    "phases": [
-      { "hpPct": 0.7, "skill": "dash" },
-      { "hpPct": 0.4, "skill": "summon" }
-    ],
-    "dropTableId": "dt_boss"
-  }
+  { "id":"grunt","hp":30,"atk":5,"speed":90,"ai":"chase","dropTableId":"dt_common" },
+  { "id":"shooter","hp":40,"atk":7,"speed":70,"ai":"kite_shoot","range":320,"rof":0.8,"dropTableId":"dt_common" },
+  { "id":"brute","hp":180,"atk":16,"speed":50,"ai":"charge","chargeCd":6,"dropTableId":"dt_common" },
+  { "id":"boomer","hp":35,"atk":22,"speed":80,"ai":"suicide","explodeRadius":120,"dropTableId":"dt_common" },
+  { "id":"summoner","hp":120,"atk":0,"speed":60,"ai":"summon","spawn":"grunt","spawnCount":3,"spawnCd":8,"dropTableId":"dt_elite" },
+  { "id":"mini_boss","hp":480,"atk":22,"speed":60,"ai":"phase_boss","phases":[{"hpPct":0.7,"skill":"dash"},{"hpPct":0.4,"skill":"spawn_minions"}],"dropTableId":"dt_elite" },
+  { "id":"boss_centipede","hp":2400,"atk":28,"speed":65,"ai":"raid_boss","skills":["line_laser","circle_bullets","tail_whip"],"dropTableId":"dt_boss" },
+  { "id":"boss_overseer","hp":3000,"atk":32,"speed":50,"ai":"raid_boss","skills":["summon","cone_blast","beam_track"],"dropTableId":"dt_boss" }
 ]

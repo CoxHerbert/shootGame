@@ -1,0 +1,10 @@
+{ "nodes": [
+  {"id":"hp1","name":"基础生命","cost":1,"effects":[{"stat":"hp","value":20}]},
+  {"id":"atk1","name":"基础攻击","cost":1,"effects":[{"stat":"atk","value":2}]},
+  {"id":"ms1","name":"基础移速","cost":1,"effects":[{"stat":"ms","value":0.05}]},
+  {"id":"crit1","name":"精准训练","cost":2,"effects":[{"stat":"critRate","value":0.05}]},
+  {"id":"dash1","name":"强化冲刺","cost":2,"effects":[{"stat":"cdr","value":0.05}]}
+],
+  "edges": [
+  {"from":"hp1","to":"crit1"}, {"from":"atk1","to":"crit1"}, {"from":"ms1","to":"dash1"}
+] }
