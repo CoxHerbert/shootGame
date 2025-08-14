@@ -6,9 +6,10 @@ import { GameScene } from '@/game/scenes/GameScene';
 let game: Phaser.Game | null = null;
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
+  parent: 'phaser-root',
   width: 960,
   height: 540,
-  parent: 'phaser-root',
+  backgroundColor: '#000000',
   physics: {
     default: 'arcade',
     arcade: { gravity: { y: 0 }, debug: false }

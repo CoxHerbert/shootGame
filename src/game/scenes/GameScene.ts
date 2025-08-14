@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 
 export class GameScene extends Phaser.Scene {
-  private player!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
+  private player!: Phaser.GameObjects.Arc & { body: Phaser.Physics.Arcade.Body };
   private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
 
   constructor() {
@@ -9,27 +9,30 @@ export class GameScene extends Phaser.Scene {
   }
 
   preload() {
-    // this.load.image('player', '/assets/player.png');
+    // assets can be loaded here
   }
 
   create() {
     this.physics.world.setBounds(0, 0, 2000, 2000);
-    this.player = this.physics.add
-      .sprite(400, 300, undefined as any)
-      .setCircle(12)
-      .setTint(0x66ccff);
+
+    const p = this.add.circle(400, 300, 12, 0x66ccff) as Phaser.GameObjects.Arc & {
+      body: Phaser.Physics.Arcade.Body;
+    };
+    this.physics.add.existing(p);
+    p.body.setCollideWorldBounds(true);
+    this.player = p;
+
     this.cursors = this.input.keyboard!.createCursorKeys();
+
     this.cameras.main.startFollow(this.player, true, 0.1, 0.1);
+    this.cameras.main.setZoom(1);
   }
 
-  update(_time: number, _dt: number) {
+  update(_: number, _dt: number) {
     const speed = 220;
-    const v = this.player.body.velocity;
-    v.set(0);
-    if (this.cursors.left?.isDown) v.x = -speed;
-    else if (this.cursors.right?.isDown) v.x = speed;
-    if (this.cursors.up?.isDown) v.y = -speed;
-    else if (this.cursors.down?.isDown) v.y = speed;
-    this.player.setVelocity(v.x, v.y);
+    const vx = (this.cursors.left?.isDown ? -1 : 0) + (this.cursors.right?.isDown ? 1 : 0);
+    const vy = (this.cursors.up?.isDown ? -1 : 0) + (this.cursors.down?.isDown ? 1 : 0);
+    const len = Math.hypot(vx, vy) || 1;
+    this.player.body.setVelocity((vx / len) * speed, (vy / len) * speed);
   }
 }
