@@ -1,0 +1,26 @@
+[
+  { "id": "lv_1_1", "name": "废墟外围 A", "tileset": "ruins_A", "mode": "survival", "duration": 180, "waves": [
+      { "time": 0,   "spawns": [{"enemyId":"grunt","count":6}] },
+      { "time": 25,  "spawns": [{"enemyId":"shooter","count":4}] },
+      { "time": 60,  "spawns": [{"enemyId":"grunt","count":10},{"enemyId":"boomer","count":2}] },
+      { "time": 120, "spawns": [{"enemyId":"mini_boss","count":1}] }
+    ], "modifiers": ["affix_fast_enemies"], "rewards": {"gold": 60}, "difficultyScale": 1.0 },
+  { "id": "lv_1_2", "name": "废墟外围 B", "tileset": "ruins_A", "mode": "survival", "duration": 210, "waves": [
+      { "time": 0,   "spawns": [{"enemyId":"grunt","count":8}] },
+      { "time": 35,  "spawns": [{"enemyId":"shooter","count":6}] },
+      { "time": 90,  "spawns": [{"enemyId":"brute","count":2}] },
+      { "time": 150, "spawns": [{"enemyId":"mini_boss","count":1}] }
+    ], "rewards": {"gold": 80}, "difficultyScale": 1.2 },
+  { "id": "lv_1_boss", "name": "破碎广场", "mode": "survival", "duration": 240, "waves": [
+      { "time": 0, "spawns": [{"enemyId":"boss_centipede","count":1}] }
+    ], "rewards": {"gold": 150, "materials": {"iron": 4}}, "difficultyScale": 1.5 },
+  { "id": "lv_2_1", "name": "走廊 I", "mode": "survival", "duration": 210, "waves": [
+      { "time": 0, "spawns": [{"enemyId":"grunt","count":10}] },
+      { "time": 45, "spawns": [{"enemyId":"summoner","count":1}] },
+      { "time": 120, "spawns": [{"enemyId":"boomer","count":4}] },
+      { "time": 160, "spawns": [{"enemyId":"mini_boss","count":1}] }
+    ], "rewards": {"gold": 90}, "difficultyScale": 1.6 },
+  { "id": "lv_2_boss", "name": "试验深处", "mode": "survival", "duration": 240, "waves": [
+      { "time": 0, "spawns": [{"enemyId":"boss_overseer","count":1}] }
+    ], "rewards": {"gold": 200, "materials": {"crystal": 2}}, "difficultyScale": 2.0 }
+]

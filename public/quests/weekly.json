@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "reset": "weekly",
+  "tasks": [
+    {
+      "id": "weekly_kill_100",
+      "title": "一周内击败 100 个敌人",
+      "progressRequired": 100
+    },
+    {
+      "id": "weekly_collect_200",
+      "title": "一周内收集 200 枚金币",
+      "progressRequired": 200
+    },
+    {
+      "id": "weekly_win_5",
+      "title": "一周内完成 5 局游戏",
+      "progressRequired": 5
+    }
+  ]
+}

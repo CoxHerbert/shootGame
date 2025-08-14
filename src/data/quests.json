@@ -1,0 +1,10 @@
+{ "daily": [
+    {"id":"d_win2","desc":"通关任意关卡 2 次","goal":2,"reward":{"gold":60}},
+    {"id":"d_kill150","desc":"累计击杀 150 敌人","goal":150,"reward":{"gold":80}},
+    {"id":"d_weapon_family","desc":"使用同一武器家族通关 1 次","goal":1,"reward":{"crystal":1}}
+  ],
+  "weekly": [
+    {"id":"w_clear20","desc":"本周通关 20 次","goal":20,"reward":{"chip_box_R":1}},
+    {"id":"w_nodamage","desc":"完成 3 次无伤小关","goal":3,"reward":{"gold":300}}
+  ]
+}
