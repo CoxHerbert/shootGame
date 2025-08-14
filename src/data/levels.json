@@ -1,0 +1,15 @@
+[
+  {
+    "id": "lv_1_1",
+    "name": "废墟外围",
+    "tileset": "ruins_A",
+    "waves": [
+      { "time": 0, "spawns": [{ "enemyId": "grunt", "count": 6 }] },
+      { "time": 20, "spawns": [{ "enemyId": "shooter", "count": 4 }] },
+      { "time": 45, "spawns": [{ "enemyId": "mini_boss", "count": 1 }] }
+    ],
+    "modifiers": ["affix_fast_enemies"],
+    "rewards": { "gold": 50, "materials": { "iron": 3 } },
+    "difficultyScale": 1.0
+  }
+]

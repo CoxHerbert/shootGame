@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "tables": {
+    "levels": "levels.json",
+    "enemies": "enemies.json",
+    "weapons": "weapons.json",
+    "drops": "drops.json",
+    "progression": "progression.json",
+    "affixes": "affixes.json"
+  }
+}

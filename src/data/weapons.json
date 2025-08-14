@@ -1,0 +1,4 @@
+[
+  { "id": "wp_pistol", "name": "标准手枪", "baseAtk": 8, "rof": 4, "bulletSpeed": 480, "spread": 1 },
+  { "id": "wp_rifle", "name": "突击步枪", "baseAtk": 6, "rof": 9, "bulletSpeed": 600, "spread": 2 }
+]

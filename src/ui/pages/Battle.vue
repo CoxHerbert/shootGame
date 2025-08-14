@@ -1,0 +1,32 @@
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount } from 'vue';
+import Phaser from 'phaser';
+import { GameScene } from '@/game/scenes/GameScene';
+
+let game: Phaser.Game | null = null;
+const config: Phaser.Types.Core.GameConfig = {
+  type: Phaser.AUTO,
+  width: 960,
+  height: 540,
+  parent: 'phaser-root',
+  physics: {
+    default: 'arcade',
+    arcade: { gravity: { y: 0 }, debug: false }
+  },
+  scene: [GameScene]
+};
+
+onMounted(() => {
+  game = new Phaser.Game(config);
+});
+onBeforeUnmount(() => {
+  game?.destroy(true);
+  game = null;
+});
+</script>
+
+<template>
+  <div class="p-2 h-[calc(100vh-64px)]">
+    <div id="phaser-root" class="w-full h-full rounded-xl overflow-hidden bg-black" />
+  </div>
+</template>

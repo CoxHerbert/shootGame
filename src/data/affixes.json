@@ -1,0 +1,12 @@
+[
+  {
+    "id": "affix_fast_enemies",
+    "desc": "敌人移动速度+15%",
+    "effects": [{ "stat": "enemy_speed_pct", "value": 0.15 }]
+  },
+  {
+    "id": "affix_heavy_bullets",
+    "desc": "子弹伤害+10%",
+    "effects": [{ "stat": "bullet_damage_pct", "value": 0.1 }]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "grunt",
+    "hp": 30,
+    "atk": 5,
+    "speed": 80,
+    "ai": "chase",
+    "dropTableId": "dt_common"
+  },
+  {
+    "id": "mini_boss",
+    "hp": 400,
+    "atk": 20,
+    "speed": 60,
+    "ai": "phase_boss",
+    "phases": [
+      { "hpPct": 0.7, "skill": "dash" },
+      { "hpPct": 0.4, "skill": "summon" }
+    ],
+    "dropTableId": "dt_boss"
+  }
+]

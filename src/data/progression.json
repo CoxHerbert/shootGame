@@ -1,0 +1,15 @@
+{
+  "playerLevelExp": [0, 20, 60, 120, 200, 300],
+  "upgradeCosts": {
+    "weapon": [
+      { "level": 1, "gold": 50 },
+      { "level": 2, "gold": 120 },
+      { "level": 3, "gold": 260 }
+    ],
+    "armor": [
+      { "level": 1, "gold": 40 },
+      { "level": 2, "gold": 100 },
+      { "level": 3, "gold": 220 }
+    ]
+  }
+}
