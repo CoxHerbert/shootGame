@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "reset": "daily",
+  "tasks": [
+    { "id": "daily_play_1", "title": "游玩 1 局", "progressRequired": 1 },
+    { "id": "daily_kill_10", "title": "击杀 10 敌人", "progressRequired": 10 },
+    { "id": "daily_collect_20", "title": "拾取 20 金币", "progressRequired": 20 }
+  ]
+}

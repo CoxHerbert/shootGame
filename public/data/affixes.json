@@ -1,0 +1,5 @@
+[
+  {"id":"affix_fast_enemies","desc":"敌人移速 +15%","effects":[{"stat":"enemy_speed_pct","value":0.15}]},
+  {"id":"affix_heavy_bullets","desc":"子弹伤害 +10%","effects":[{"stat":"bullet_damage_pct","value":0.1}]},
+  {"id":"affix_thick_skin","desc":"敌人受伤 -8%","effects":[{"stat":"enemy_damage_taken_pct","value":-0.08}]}
+]

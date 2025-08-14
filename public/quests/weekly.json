@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "reset": "weekly",
+  "tasks": [
+    { "id": "weekly_kill_100", "title": "击杀 100 敌人", "progressRequired": 100 },
+    { "id": "weekly_collect_200", "title": "拾取 200 金币", "progressRequired": 200 }
+  ]
+}
