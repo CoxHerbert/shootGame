@@ -1,4 +1,6 @@
 import { defineConfig } from 'vite';
+// Import the Vue plugin via its ESM entry. Using the CJS build triggers missing
+// `@vue/compiler-core` errors on some setups when Vite bundles the config.
 import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
 
