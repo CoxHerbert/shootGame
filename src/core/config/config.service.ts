@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { fetchJSON } from '@/services/network';
+import { fetchJSON } from '../../services/network';
 
 export const LevelWave = z.object({
   time: z.number().nonnegative(),
