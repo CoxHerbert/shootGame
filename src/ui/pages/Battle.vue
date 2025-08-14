@@ -3,6 +3,7 @@ import { onMounted, onBeforeUnmount } from 'vue';
 import Phaser from 'phaser';
 import { GameScene } from '@/game/scenes/GameScene';
 import { BootScene } from '@/game/scenes/BootScene';
+import { ResultScene } from '@/game/scenes/ResultScene';
 
 let game: Phaser.Game | null = null;
 const config: Phaser.Types.Core.GameConfig = {
@@ -13,9 +14,9 @@ const config: Phaser.Types.Core.GameConfig = {
   backgroundColor: '#000000',
   physics: {
     default: 'arcade',
-    arcade: { gravity: { y: 0 }, debug: false }
+    arcade: { gravity: { y: 0 }, debug: false },
   },
-  scene: [BootScene, GameScene]
+  scene: [BootScene, GameScene, ResultScene],
 };
 
 onMounted(() => {
