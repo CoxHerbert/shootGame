@@ -1,13 +1,6 @@
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
-import { createRequire } from 'module';
-
-// Use require() to load the Vue plugin's CommonJS build. This avoids
-// Node's ESM named export check against the installed Vue package and
-// prevents "does not provide an export named 'computed'" errors.
-const require = createRequire(import.meta.url);
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const vue = require('@vitejs/plugin-vue');
 
 export default defineConfig({
   plugins: [
