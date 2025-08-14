@@ -6,6 +6,7 @@ import { createEnemy, type EnemyGO } from '@/game/prefabs/enemyFactory';
 import { makeChase } from '@/game/systems/ai/chase';
 import { makeKiteShoot } from '@/game/systems/ai/kite_shoot';
 import { useBattleStore } from '@/stores/battle';
+import { useQuestsStore } from '@/stores/quests';
 
 export class GameScene extends Phaser.Scene {
   private player!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
@@ -35,6 +36,8 @@ export class GameScene extends Phaser.Scene {
   async create() {
     const battle = useBattleStore();
     battle.start(battle.levelId);
+    const qs = useQuestsStore();
+    await qs.init();
 
     const { width, height } = this.scale;
     const bg = this.add.tileSprite(0, 0, width * 4, height * 4, 'tile_dark').setOrigin(0);
@@ -166,6 +169,9 @@ export class GameScene extends Phaser.Scene {
 
   private finish() {
     const battle = useBattleStore();
+    const qs = useQuestsStore();
+    qs.onWin();
+    qs.onKills(battle.kills);
     battle.end(battle.kills > 30 ? 'S' : battle.kills > 15 ? 'A' : 'B');
     this.scene.pause();
     this.scene.launch('ResultScene');

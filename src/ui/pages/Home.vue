@@ -16,5 +16,11 @@ onMounted(async () => {
     <router-link to="/battle" class="px-4 py-2 bg-blue-600 text-white rounded">
       开始战斗
     </router-link>
+    <router-link
+      to="/quests"
+      class="px-4 py-2 bg-slate-700 text-white rounded inline-block ml-3"
+    >
+      每日任务
+    </router-link>
   </div>
 </template>

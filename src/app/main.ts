@@ -9,6 +9,7 @@ const router = createRouter({
   routes: [
     { path: '/', component: () => import('@/ui/pages/Home.vue') },
     { path: '/battle', component: () => import('@/ui/pages/Battle.vue') },
+    { path: '/quests', component: () => import('@/ui/pages/Quests.vue') },
   ],
 });
 
